@@ -20,7 +20,9 @@ function checkText(text) {
 
   const textNum = document.getElementById("ex2_text");
   const contentNum = document.getElementById("ex2_content");
-  textNum.addEventListener("input", function (event) {
+  const counter = document.getElementById("ex2_counter");
+
+  function numberCheck(event) {
     let cont = "";
     let text = textNum.value;
     let check = checkText(text);
@@ -31,7 +33,11 @@ function checkText(text) {
       else cont = "Numer telefonu jest poprawny";
     }
     contentNum.textContent = cont;
-  });
+    counter.textContent = `Wpisano ${text.length} znaków`;
+  }
+
+  textNum.addEventListener("input", numberCheck);
+  numberCheck();
 
   // Cw 2
 
