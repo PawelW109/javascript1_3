@@ -74,4 +74,13 @@ function checkText(text) {
       el.classList.remove("animate");
     }, 2000);
   });
+
+  const btnE4 = document.getElementById("ex4_button");
+
+  btnE4.addEventListener("click", function () {
+    const r = 200 + Math.floor(Math.random() * 50);
+    const g = 200 + Math.floor(Math.random() * 50);
+    const b = 200 + Math.floor(Math.random() * 50);
+    document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+  });
 })();
