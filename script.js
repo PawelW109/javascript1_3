@@ -61,4 +61,17 @@ function checkText(text) {
       container.appendChild(draggedE);
     });
   });
+
+  // Cw 3
+
+  const el = document.getElementById("ex6_element");
+  const btn = document.getElementById("ex6_animate_button");
+
+  btn.addEventListener("click", function () {
+    el.classList.add("animate");
+
+    setTimeout(function () {
+      el.classList.remove("animate");
+    }, 2000);
+  });
 })();
