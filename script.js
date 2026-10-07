@@ -89,4 +89,22 @@ function checkText(text) {
     const b = 200 + Math.floor(Math.random() * 50);
     document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
   });
+
+  const btnE6 = document.getElementById("ex6_button");
+  const timerD = document.getElementById("ex6_timer");
+
+  let timeCounter = 0;
+  let timer = null;
+
+  btnE6.addEventListener("click", function () {
+    if (timer == null) {
+      timer = setInterval(() => {
+        timeCounter++;
+        timerD.textContent = timeCounter;
+      }, 1000);
+    } else {
+      clearInterval(timer);
+      timer = null;
+    }
+  });
 })();
